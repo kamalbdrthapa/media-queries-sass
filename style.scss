@@ -1,0 +1,51 @@
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+
+* {
+    margin: 10px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    body{
+        font-family: sans-serif;
+        font-size: 45px;
+    }
+}
+
+.container{
+    display: flex;
+    flex-direction: column; //  to show row in columns
+    height: 100vh;
+    gap: 30px; //  to show row in 30px gap
+
+}
+
+[class ^="row-"]{
+    display: flex;
+    flex-direction: row; // to show box in rows 
+    gap: 30px; // to show box in 30px gap
+
+}
+
+[class ^="box-"]{
+    background-color: #c4c4c4;
+    border: 2px solid black;
+    width: (100%)/3;
+    height: (100vh)/3;
+    display: grid;
+    place-items: center;
+}
+
+@media (max-width:650px){
+    .container{}
+    [class ^="row-"]{
+        display: flex;
+        flex-direction: column;
+    }
+
+    [class ^="box-"]{
+        width: 100%;
+    }
+}
